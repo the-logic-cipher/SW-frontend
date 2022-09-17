@@ -1,0 +1,62 @@
+@import "../../Themes/Color.scss";
+
+body{
+    overflow-x: hidden;
+}
+
+.product-detail{
+    .product-detail-data {
+        .star{
+            color: #ecc33b;
+        }
+
+       h5{
+        color: $primary;
+       }
+        .counter{
+            margin-top: 28px;
+            width: 100px;
+            height: 40px;
+            border: 1px solid rgb(224, 222, 222);
+        }
+        p{
+            text-align: justify;
+        }
+    }
+}
+
+
+@media (max-width: 1200px){
+    .product-detail {
+        .product-detail-data{
+            .pro-desc{
+                display: none;
+            }
+        }
+    }
+    .pro-desc1{
+        display: block;
+    }
+}
+@media (max-width: 768px){
+    .product-detail {
+        .product-detail-images{
+            .grid{
+                margin: 0 15%;
+            }
+        }
+        .product-detail-data{
+            margin-top: 5%;
+        }
+    }
+}
+@media (max-width: 390px){
+    .product-detail {
+        .product-detail-data{
+            margin-left: 0px;
+            label{
+               margin-right: 10px;
+            }
+        }
+    }
+}

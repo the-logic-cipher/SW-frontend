@@ -1,0 +1,13 @@
+@import "../../../Themes/Color.scss";
+.obtn a{
+    border: 1px solid $primary;
+    width: fit-content;
+    color: $primary;
+    background-color: none;
+    padding: 12px 22px;
+    
+    &:hover{
+        background-color: $primary;
+        color: white;
+    }
+}

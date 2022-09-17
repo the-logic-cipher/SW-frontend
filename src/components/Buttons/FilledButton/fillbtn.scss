@@ -1,0 +1,11 @@
+@import "../../../Themes/Color.scss";
+
+.btn a{
+   background-color: $primary;
+   width: fit-content;
+   padding: 12px 22px;
+
+   &:hover{
+      outline: none;
+   }
+}

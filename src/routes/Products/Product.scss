@@ -1,0 +1,86 @@
+@import "../../Themes/Color.scss";
+a{
+    text-decoration: none;
+    color: rgb(28, 28, 28);
+    transition: .2s all ease;
+
+    &:hover{
+        color: rgb(31, 31, 31);
+    }
+
+}
+option{
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 0;
+}
+select{
+    border: none;
+    background:none ;
+    padding: 5px;
+    font-weight: 600;
+    border-bottom: 1px solid #c7c7c7;
+
+}
+p{
+    font-weight: 500;
+}
+
+.p-head{
+    background-color: rgb(238, 236, 236);
+
+    .p-head-1{
+        h2{
+            color: $primary;
+            font-weight: 600;
+        }
+    }
+}
+.data{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+    .car{
+        max-width: 280px;
+        overflow: hidden;
+    }
+}
+
+.filter-bar{
+    background-color: $light-blue;
+    height: fit-content;
+
+    h5{
+        color: $primary;
+    }
+
+    input{
+        border: 1px solid rgb(158, 158, 158);
+        background-color:transparent;
+        padding: 10px 5px;
+
+        &:focus{
+            border: 1px solid black;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1250px) {
+
+    .data{
+        display: grid;
+        grid-template-columns: auto auto  ;
+        
+    }
+    
+}
+@media screen and (max-width: 800px) {
+
+    .data{
+        display: grid;
+        grid-template-columns: auto ;
+        
+    }
+    
+}
