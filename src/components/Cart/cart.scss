@@ -1,12 +1,12 @@
-@import "../../Themes/Colors.scss";
+@import "../../Themes/Color.scss";
 
 .cart-head{
-    border-bottom: 1px solid $light-grey;
+    border-bottom: 1px solid rgb(224, 222, 222);
 }
 .cart-content{
-    border-bottom: 1px solid $light-grey;
+    border-bottom: 1px solid rgb(224, 222, 222);
     .close{
-        background-color: $light-grey;
+        background-color: rgb(224, 222, 222);
         border-radius: 50%;
         width: 40px;
         height: 40px;
@@ -14,8 +14,8 @@
     }
 }
 .cart{
-    background-color: $light-grey;
+    background-color: rgb(224, 222, 222);
     h5{
-        color: $pink;
+        color: $primary;
     }
 }

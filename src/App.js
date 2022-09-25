@@ -12,6 +12,8 @@ import ProductDetails from "./routes/ProductDetails";
 import Payment from "./routes/Payment"
 import Products from "./routes/Products";
 import Whishlist from "./routes/Wishlist"
+import AddToCart from "./routes/AddToCart";
+import Checkout from "./routes/Checkout";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
         <Route exact path='/productDetails' element={<ProductDetails/>} />
         <Route exact path='/products' element={<Products/>} />
         <Route exact path='/wishlist' element={<Whishlist/>} />
+        <Route exact path='/cart' element={<AddToCart/>} />
+        <Route exact path='/checkout' element={<Checkout/>} />
       </Routes>
       </Router>
     </>

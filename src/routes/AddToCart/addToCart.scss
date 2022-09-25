@@ -1,0 +1,26 @@
+@import "../../Themes/Color.scss";
+
+.p-head{
+    h6{
+        .count{
+            background-color: grey;
+            padding: 2px 9px;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+        .counts{
+            background-color: $secondary;
+            padding: 2px 3px;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+    }
+    .bar{
+        content: " ";
+        background-color: $primary;
+        margin: 0px 15px;
+        height: .1rem;
+        width: 100px;
+        margin-top: 16px;
+}
+}

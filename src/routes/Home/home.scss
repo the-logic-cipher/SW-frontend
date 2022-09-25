@@ -16,3 +16,34 @@
 .bord{
     border-right: 1px solid rgb(235, 234, 234);
 }
+.bords{
+    border-right: 1px solid rgb(235, 234, 234);
+}
+.insta{
+    font-size: 100px;
+    color: $primary;
+}
+
+@media (max-width:1400px) {
+    .insta{
+        font-size: 80px;
+    }
+}
+@media (max-width:1000px) {
+    .para{
+        margin-bottom: 80px;
+    }
+    .bords{
+        border-right: none;
+    }
+}
+@media (max-width:762px) {
+    .g-para{
+        margin-top: 50px;
+    }
+}
+@media (max-width:576px) {
+    .bord{
+        border-right: none;
+    }
+}

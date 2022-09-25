@@ -10,12 +10,12 @@ function Slider() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="./Imgs/img1.jpg"
+            src="./Imgs/img2.jpg"
             alt="First slide"
           />
           <div className="text">
-            <h4 className="pb-4">New Eyewear Collection</h4>
-            <h1 className="pb-5">Choose Your Best Pair</h1>
+            <h4 className="pb-xl-4 pb-3">New Eyewear Collection</h4>
+            <h1 className="pb-xl-5 pb-4">Choose Your <br/> Best Pair</h1>
             <FilledButton title="Shop Now" link="/" />
           </div>
           <div></div>
@@ -23,12 +23,12 @@ function Slider() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="./Imgs/img2.jpg"
+            src="./Imgs/img1.jpg"
             alt="Second slide"
           />
           <div className="text">
-            <h4 className="pb-4">Perfect UV Protection</h4>
-            <h1 className="pb-5">Blue Light Glasses</h1>
+            <h4 className="pb-xl-4 pb-3">Perfect UV Protection</h4>
+            <h1 className="pb-xl-5 pb-4">Blue Light <br /> Glasses</h1>
             <FilledButton title="Shop Now" link="/" />
           </div>
         </Carousel.Item>

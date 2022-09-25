@@ -1,41 +1,58 @@
 .cards {
-    .cards-img{
-        overflow: hidden;
-    }
-    img{
-        position: relative;
-        transition: 0.7s all ease-in-out;
-        max-width: 280px;
+  .cards-img {
+    overflow: hidden;
+    position: relative;
 
-        &:hover{
-            transform: scale(1.2);
-        }
+    img {
+      transition: 0.7s all ease-in-out;
+      width: 280px;
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
-    .star{
-        color: rgb(236, 195, 59);
-    }
-    .icons{
-        position: absolute;
-        transform: translate(39%, -180px);
-        opacity: 0;
-        transition: 0.3s all ease-in-out;
-    }
-    .card-icons{
+
+    .icons {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: 0.3s all ease-in-out;
+      z-index: 1;
+
+      .card-icons {
         font-size: 36px;
         background-color: white;
         color: rgb(63, 62, 62);
-        padding: 7px;
+        padding: 9px;
         cursor: pointer;
-        transition: all .3s ease-in-out;
-
-        &:hover{
-            transform: translateY(-8px);
+        transition: all 0.3s ease-in-out;
+    
+        &:hover {
+          transform: translateY(-8px);
         }
-    }               
-    &:hover{
-        .icons{
-            opacity: 1;
-        }
+      }
+      .center-icon{
+        margin: 0px 12px;
+      }
     }
+  }
+
+  .star {
+    color: rgb(236, 195, 59);
+  }
+
+  &:hover {
+    .icons {
+      opacity: 1;
+    }
+  }
 }
 
+@media (max-width: 762px) {
+    .cards .cards-img img{
+        width: 100%;
+        margin-right: 0px;
+    }
+  }

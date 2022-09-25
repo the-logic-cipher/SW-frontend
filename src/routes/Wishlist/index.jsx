@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import WishlistCard from '../../components/WishlistCard';
 
 const Wishlist = () => {
   return (
@@ -10,7 +11,9 @@ const Wishlist = () => {
         <h3 className='text-center fs-2 fw-bold text-black mt-2 '>My Wishlist</h3>
         </div>
       </div>
-      {/* <Link to='/'><p className='text-black text-center fs-6 mt-5'>Share my wishlist on &nbsp; </p></Link> */}
+      <WishlistCard/>
+      <WishlistCard/>
+      <Link to='/'><p className='text-black text-center fs-6 mt-5'>Share my wishlist on &nbsp; </p></Link>
     </div>
   )
 }

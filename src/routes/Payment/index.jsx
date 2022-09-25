@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { MdDone } from "react-icons/md";
+import DoneIcon from "@mui/icons-material/Done";
+import FilledButton from "../../components/Buttons/FilledButton";
 
 const Payment = () => {
 
@@ -83,27 +84,27 @@ const Payment = () => {
             <h6>
               <Link to="/cart" className="mb-0 text-black fw-bold">
                 <span className="counts fs-5 fw-bold text-white">
-                  <MdDone sx={{ marginTop: -0.5 }} />
+                  <DoneIcon sx={{ marginTop: -0.5 }} />
                 </span>{" "}
                 Cart
               </Link>
             </h6>
             <div className="bar"></div>
             <h6>
-              <Link to="/checkout" className="mb-0 text-black fw-bold">
+            <Link to="/checkout" className="mb-0 text-black fw-bold">
                 <span className="counts fs-5 fw-bold text-white">
-                  <MdDone sx={{ marginTop: -0.5 }} />
+                  <DoneIcon sx={{ marginTop: -0.5 }} />
                 </span>{" "}
                 Checkout
               </Link>
             </h6>
             <div className="bar"></div>
             <h6 className="mb-0">
-              <span className="count fs-5 fw-bold text-white">3</span> Payment{" "}
+              <span className="count fs-5 fw-bold text-white pb-1">3</span> Payment{" "}
             </h6>
             <div className="bar"></div>
             <h6 className="mb-0">
-              <span className="count fs-5 fw-bold text-white">4</span> Confirm
+              <span className="count fs-5 fw-bold text-white pb-1">4</span> Confirm
               Order
             </h6>
           </div>
@@ -118,7 +119,7 @@ const Payment = () => {
               <form action="" onSubmit={onSubmit}>
                 <div class="form-check mb-2">
                   <input
-                    class="form-check-input mb-0"
+                    class="form-check-input p-2"
                     type="radio"
                     name="paymentMethod"
                     id="flexRadioDefault1"
@@ -139,7 +140,7 @@ const Payment = () => {
                     <div className="p-3">
                       <div class="form-check mb-2">
                         <input
-                          class="form-check-input mb-0"
+                          class="form-check-input mb-0 p-2"
                           type="radio"
                           name="addressMethod"
                           id="flexRadio1"
@@ -158,7 +159,7 @@ const Payment = () => {
                       <div></div>
                       <div class="form-check">
                         <input
-                          class="form-check-input mb-0"
+                          class="form-check-input mb-0 p-2"
                           type="radio"
                           name="addressMethod"
                           id="flexRadio2"
@@ -189,8 +190,8 @@ const Payment = () => {
                             />
                             <p className="text-danger">{formErrors.address}</p>
                           </div>
-                          <div className="d-flex justify-content-between">
-                            <div className="form-group">
+                          <div className="d-flex">
+                            <div className="form-group w-100">
                               <label htmlFor="city">City Name*</label>
                               <input
                                 type="text"
@@ -202,7 +203,8 @@ const Payment = () => {
                               />
                               <p className="text-danger">{formErrors.city}</p>
                             </div>
-                            <div className="form-group">
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div className="form-group w-100">
                               <label htmlFor="postalCode">Postal Code *</label>
                               <input
                                 type="text"
@@ -236,7 +238,7 @@ const Payment = () => {
                 </div>
                 <div class="form-check">
                   <input
-                    class="form-check-input mb-0"
+                    class="form-check-input mb-0 p-2"
                     type="radio"
                     name="paymentMethod"
                     id="flexRadioDefault2"
@@ -257,11 +259,9 @@ const Payment = () => {
                   {formValue.paymentMethod === "cardPayment" ? (
                     <button className="border-0 bg-black text-white px-4 py-2 mt-3 mb-2 me-2">
                     CONFIRM ORDER
-                  </button>
-                  ) : (
-                    <button className="border-0 bg-black text-white px-4 py-2 mt-3 mb-2 me-2">
-                      CONFIRM ORDER
                     </button>
+                  ) : (
+                    <FilledButton title="Confirm Order" link="/confirm" />
                   )}
                 </div>
               </form>
