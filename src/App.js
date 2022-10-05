@@ -14,6 +14,7 @@ import Products from "./routes/Products";
 import Whishlist from "./routes/Wishlist"
 import AddToCart from "./routes/AddToCart";
 import Checkout from "./routes/Checkout";
+import Footer from "./components/layout/Footer";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route exact path='/cart' element={<AddToCart/>} />
         <Route exact path='/checkout' element={<Checkout/>} />
       </Routes>
+      <Footer/>
       </Router>
     </>
   );
