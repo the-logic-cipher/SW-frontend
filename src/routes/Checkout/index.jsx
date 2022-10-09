@@ -110,12 +110,12 @@ const Checkout = () => {
         </div>
       </div>
       <div>
-        <div className="container my-5 py-5">
-          <div className="row">
-            <div className="d-flex flex-column col-md-8">
+        <div className="my-5 py-5 mx-sm-5 mx-4 px-xl-5 px-lg-3 px-md-2 px-sm-0">
+          <div className="d-lg-flex">
+            <div className="d-flex flex-column col-lg-8">
               <h6 className="fw-bold fs-6 mb-4">INFORMATION</h6>
               <form onSubmit={onSubmit}>
-                <div className="d-flex">
+                <div className="d-sm-flex">
                   <div className="form-group w-100">
                     <label htmlFor="username">First Name *</label>
                     <input
@@ -128,7 +128,7 @@ const Checkout = () => {
                     />
                     <p className="text-danger">{formErrors.firstName}</p>
                   </div>
-                  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                  <div className="mx-md-3 mx-sm-2"></div>
                   <div className="form-group w-100">
                     <label htmlFor="lastName">Last Name *</label>
                     <input
@@ -154,7 +154,7 @@ const Checkout = () => {
                   />
                 </div>
                 <p className="text-danger">{formErrors.address}</p>
-                <div className="d-flex">
+                <div className="d-sm-flex">
                   <div className="form-group w-100">
                     <label htmlFor="city">City Name*</label>
                     <input
@@ -167,7 +167,7 @@ const Checkout = () => {
                     />
                     <p className="text-danger">{formErrors.city}</p>
                   </div>
-                  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                  <div className="mx-md-3 mx-sm-2"></div>
                   <div className="form-group w-100">
                     <label htmlFor="postalCode">Postal Code *</label>
                     <input
@@ -206,7 +206,7 @@ const Checkout = () => {
                   />
                 </div>
                 <p className="text-danger">{formErrors.email}</p>
-                <div className="d-flex justify-content-end mt-5">
+                <div className="d-flex justify-content-end mt-5 d-lg-block d-none">
                   {/* <button className="border-0 bg-black text-white px-4 py-2 mt-3">
                     CONTINUE PAYMENT
                   </button> */}
@@ -215,9 +215,9 @@ const Checkout = () => {
               </form>
             </div>
 
-            <div className="col-md-4">
-              <h6 className="fw-bold fs-6 ms-5">PAYMENT</h6>
-              <div className="cart p-5 ms-5 mt-4">
+            <div className="col-lg-4">
+              <h6 className="fw-bold fs-6 ms-lg-5 ms-0 mt-5 mt-lg-0">PAYMENT</h6>
+              <div className="cart py-5 px-4 ms-lg-5 ms-0 mt-4">
                 <h6 className="fw-bold fs-6 mb-5">CART TOTAL</h6>
                 <div className="d-flex justify-content-between">
                   <p className="fs-6 text-black">SubTotal</p>
@@ -235,6 +235,12 @@ const Checkout = () => {
                 </div>
               </div>
             </div>
+            <div className="d-flex justify-content-end mt-5 d-block d-lg-none">
+                  {/* <button className="border-0 bg-black text-white px-4 py-2 mt-3">
+                    CONTINUE PAYMENT
+                  </button> */}
+                  <FilledButton title="Continue Payment" link="/payment" />
+                </div>
           </div>
         </div>
       </div>

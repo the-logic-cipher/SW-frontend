@@ -52,6 +52,11 @@ body{
 }
 @media (max-width: 390px){
     .product-detail {
+        .product-detail-images{
+            .grid{
+                margin: 0 10%;
+            }
+        }
         .product-detail-data{
             margin-left: 0px;
             label{

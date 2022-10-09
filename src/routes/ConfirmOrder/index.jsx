@@ -22,9 +22,9 @@ const ConfirmOrder = () => {
       </div>
       <div className="container my-5 py-5">
           <div className='row'>
-            <div className='col-md-3'></div>
-            <div className='col-md-6'>
-              <div className="cart p-5">
+            <div className='col-lg-3 col-md-2'></div>
+            <div className='col-lg-6 col-md-8'>
+              <div className="cart p-5 px-sm-5 px-4">
                 <img className='d-block mx-auto img-fluid' width={100} height="auto" src="/Imgs/done.png" alt="done" />
                 <h3 className='fs-3 fw-bold text-center text-black'>Your Order <br/> Has Been Placed</h3>
                 <h6 className='fs-6 text-center mt-4 text-black'>If you have any query kindly contact us at the.logic.cipher@gmail.com </h6>
@@ -34,7 +34,7 @@ const ConfirmOrder = () => {
                 </div>
               </div>
             </div>
-            <div className='col-md-3'></div>
+            <div className='col-lg-3 col-md-2'></div>
           </div>
         </div>
     </div>

@@ -110,9 +110,9 @@ const Payment = () => {
           </div>
         </div>
       </div>
-      <div className="container my-5 py-5">
-        <div className="row">
-          <div className="d-flex flex-column col-md-8">
+      <div className="my-5 py-5 mx-sm-5 mx-4 px-xl-5 px-lg-3 px-md-2 px-sm-0">
+        <div className="d-lg-flex">
+          <div className="d-flex flex-column col-lg-8">
             <h6 className="fw-bold fs-6 mb-2">PAYMENT METHOD</h6>
 
             <div className="p-3 border mt-3">
@@ -190,7 +190,7 @@ const Payment = () => {
                             />
                             <p className="text-danger">{formErrors.address}</p>
                           </div>
-                          <div className="d-flex">
+                          <div className="d-sm-flex">
                             <div className="form-group w-100">
                               <label htmlFor="city">City Name*</label>
                               <input
@@ -203,7 +203,7 @@ const Payment = () => {
                               />
                               <p className="text-danger">{formErrors.city}</p>
                             </div>
-                            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div className="mx-md-3 mx-sm-2"></div>
                             <div className="form-group w-100">
                               <label htmlFor="postalCode">Postal Code *</label>
                               <input
@@ -255,10 +255,10 @@ const Payment = () => {
                   </label>
                 </div>
                 <p className="text-danger">{formErrors.paymentMethod}</p>
-                <div className="d-flex justify-content-end">
+                <div className="d-lg-flex justify-content-end d-none mb-3">
                   {formValue.paymentMethod === "cardPayment" ? (
-                    <button className="border-0 bg-black text-white px-4 py-2 mt-3 mb-2 me-2">
-                    CONFIRM ORDER
+                    <button className="fs-4 fs-lg-5 border-0 text-white mt-3 me-2" style={{paddingRight:22,paddingLeft:22, paddingTop:12, paddingBottom:12, backgroundColor:'#243c68'}}>
+                    Confirm Order
                     </button>
                   ) : (
                     <FilledButton title="Confirm Order" link="/confirm" />
@@ -268,9 +268,9 @@ const Payment = () => {
             </div>
           </div>
 
-          <div className="col-md-4">
-            <h6 className="fw-bold fs-6 ms-5">PAYMENT</h6>
-            <div className="cart p-5 ms-5 mt-4">
+          <div className="col-lg-4">
+            <h6 className="fw-bold fs-6 ms-lg-5 mt-5 mt-lg-0">PAYMENT</h6>
+            <div className="cart py-5 px-4 ms-lg-5 mt-4">
               <h6 className="fw-bold fs-6 mb-5">CART TOTAL</h6>
               <div className="d-flex justify-content-between">
                 <p className="fs-6 text-black">SubTotal</p>
@@ -288,6 +288,15 @@ const Payment = () => {
               <div className="d-flex justify-content-center mt-4"></div>
             </div>
           </div>
+          <div className="d-flex justify-content-sm-end justify-content-center d-lg-none d-block mt-5">
+                  {formValue.paymentMethod === "cardPayment" ? (
+                    <button className="fs-4 fs-lg-5 border-0 text-white mt-3 mb-2 me-2" style={{paddingRight:22,paddingLeft:22, paddingTop:12, paddingBottom:12, backgroundColor:'#243c68'}}>
+                    Confirm Order
+                    </button>
+                  ) : (
+                    <FilledButton title="Confirm Order" link="/confirm" />
+                  )}
+                </div>
         </div>
       </div>
     </div>

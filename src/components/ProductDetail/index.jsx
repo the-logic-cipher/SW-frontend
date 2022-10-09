@@ -41,25 +41,27 @@ const ProductDetail = () => {
   };
 
   return (
-    <div className="container">
-      <div className="product-detail row mb-5 pb-5">
-
-        <section className="col-md-1 mt-5 p-0">
+    <div className="mx-lg-5 px-lg-5 mx-4 px-sm-4">
+      <div className="product-detail d-lg-flex mb-5 pb-lg-5">
+       <div className="d-flex col-lg-6">
+       <section className="col-2 mt-lg-5 p-0">
         <img className="img-fluid mb-3" src="/Imgs/glasses.jpg" alt="" />
         <img className="img-fluid mb-3" src="/Imgs/glasses.jpg" alt="" />
         <img className="img-fluid" src="/Imgs/glasses.jpg" alt="" />
         </section>
 
-        <section className="product-detail-images col-md-5">
+        <section className="product-detail-images col-10">
           <div>
             <div className="grid">
-              <div className="pt-lg-5 px-4">
+              <div className="pt-lg-5 px-md-4 d-flex justify-content-center">
                 <img className="img-fluid" src="/Imgs/glasses.jpg" alt="" />
               </div>
             </div>
           </div>
         </section>
-        <section className="product-detail-data d-block mt-5 ps-sm-5 col-md-6">
+       </div>
+
+        <section className="product-detail-data d-block mt-5 ps-lg-5 col-lg-6">
           <h4 className="fs-2">Brown Glasses</h4>
 
           <div className="my-3 d-flex justify-content-between">
@@ -96,7 +98,7 @@ const ProductDetail = () => {
               </div>
             </div>
             <div className="d-none d-sm-block">&nbsp; &nbsp; &nbsp;</div>
-            <div className="mt-4">
+            <div className="mt-4 pt-2">
               <FilledButton title="Add To Cart" link="/" />
             </div>
           </div>
@@ -114,14 +116,14 @@ const ProductDetail = () => {
         
       {/* --------------- Reviews ---------------- */}
 
-      <section className="d-flex mt-5 pt-5">
-        <div className="col-md-5">
+      <section className="d-lg-flex mt-5 pt-5">
+        <div className="col-lg-6">
           <h3 className="mb-4">Review for Shashky Washkay</h3>
           <ReviewCard/>
           <ReviewCard/>
         </div>
-        <div className="col-md-1"></div>
-        <div className="col-md-6">
+        {/* <div className="col-md-1"></div> */}
+        <div className="col-lg-6 mt-5 mt-lg-0">
           <h3 className="mb-4">Add a Review</h3>
           <p className="text-black-50 mb-4">Your email address will not be published.</p>
           <form onSubmit={handleSubmit}>

@@ -30,25 +30,27 @@ const Contact = () => {
   };
   
   return (
-    <div className='container'>
-      <div className="d-flex text-center my-5 py-5">
-        <div className="col-md-4 bord">
+    <div className='contact'>
+      <div className="d-lg-flex text-center my-5 py-5 info">
+        <div className="d-md-flex col-lg-8">
+        <div className="col-md-6 bord">
           <TbPhoneCall className="icons mb-3"/>
           <h5>Phone</h5>
-          <p>+92 300 0000000</p>
+          <p className='p'>+92 300 0000000</p>
         </div>
-        <div className="col-md-4 bord">
+        <div className="col-md-6 bords">
           <MdOutlineMailOutline className="icons mb-3"/>
           <h5>Email</h5>
-          <p>shashkaywashkay@gmail.com</p>
+          <p className='p'>shashkaywashkay@gmail.com</p>
         </div>
-        <div className="col-md-4">
+        </div>
+        <div className="col-lg-4 mt-lg-0 mt-sm-5">
           <MdOutlineLocationOn className="icons mb-3"/>
           <h5>Location</h5>
-          <p>Rahim Yar Khan, Pakistan</p>
+          <p className='p'>Rahim Yar Khan, Pakistan</p>
         </div>
       </div>
-      <div className="row">
+      <div className="row mx-lg-5 mx-md-3 px-lg-5">
           <div className="col-md-5">
             <h2 className="fs-2 fw-bold mb-4">Contact Us</h2>
             <p>
@@ -64,9 +66,9 @@ const Contact = () => {
               <FaInstagram className='contact-icons'/>
             </div>
           </div>
-          <div className="col-md-7">
+          <div className="col-md-7 form">
             <form onSubmit={handleSubmit}>
-              <div className='d-flex'>
+              <div className='d-sm-flex'>
               <input
                 type="name"
                 id="name"
@@ -75,7 +77,7 @@ const Contact = () => {
                 placeholder="Name"
                 onChange={handleChange}
               />
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div className='margin'></div>
               <input
                 type="email"
                 id="email"
@@ -85,7 +87,7 @@ const Contact = () => {
                 onChange={handleChange}
               />
               </div>
-              <div className='d-flex'>
+              <div className='d-sm-flex'>
               <input
                 type="phone"
                 id="phone"
@@ -94,7 +96,7 @@ const Contact = () => {
                 placeholder="Phone"
                 onChange={handleChange}
               />
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div className='margin'></div>
               <input
                 type="subject"
                 id="subject"
@@ -119,6 +121,10 @@ const Contact = () => {
             </form>
           </div>
         </div>
+        <br />
+        <br />
+        <br />
+        <br />
     </div>
   )
 }
