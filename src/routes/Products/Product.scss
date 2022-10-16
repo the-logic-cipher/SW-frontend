@@ -39,6 +39,7 @@ p{
 .data{
     display: grid;
     grid-template-columns: auto auto auto;
+    grid-column-gap: 50px;
     
     .car{
         max-width: 280px;
@@ -65,22 +66,34 @@ p{
     }
 }
 
+@media screen and (max-width: 1395px) {
 
+    .data{
+        display: grid;
+        grid-template-columns: auto auto  ;
+        grid-gap: 20px;
+    }
+    
+}
 @media screen and (max-width: 1250px) {
 
     .data{
         display: grid;
         grid-template-columns: auto auto  ;
-        
+        grid-gap: 20px;
     }
     
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 645px) {
 
     .data{
         display: grid;
         grid-template-columns: auto ;
         
     }
+    // .car{
+    //     display: flex;
+    //     justify-content: center;
+    // }
     
 }

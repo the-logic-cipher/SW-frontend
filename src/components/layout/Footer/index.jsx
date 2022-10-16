@@ -54,6 +54,7 @@ const Footer = () => {
           <br />
           <hr />
           <div className="copyright">
+            {/* ------  &copy;  ------ */}
             <p>Copyright © 2022 All rights reserved</p>
           </div>
         </div>

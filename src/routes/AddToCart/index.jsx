@@ -3,41 +3,44 @@ import Cart from "../../components/Cart";
 import { Link } from "react-router-dom";
 import "./addToCart.scss";
 import FilledButton from "../../components/Buttons/FilledButton";
+import Meta from "../../components/layout/Meta";
 
 const AddToCart = () => {
   return (
     <div>
+      <Meta title="Cart" />
+
       <div className="p-head py-5">
         <div className="container text-center px-3">
           <div className=" d-flex justify-content-center">
-          <div className="d-md-flex">
-          <p className="col-sm-6 count fs-sm-5 fs-6 fw-bold text-white mb-0">1</p>
-          <h6 className="col-sm-6 mt-1 mb-0">
-               Cart
-            </h6>
-          </div>
+            <div className="d-md-flex">
+              <p className="col-sm-6 count fs-sm-5 fs-6 fw-bold text-white mb-0">
+                1
+              </p>
+              <h6 className="col-sm-6 mt-1 mb-0">Cart</h6>
+            </div>
 
             <div className="bar"></div>
             <div className="d-md-flex">
-          <p className="col-sm-4 count fs-sm-5 fs-6 fw-bold text-white mb-0 ms-md-0 ms-3">2</p>
-          <h6 className="col-sm-8 mt-1 mb-0">
-               Checkout
-            </h6>
-          </div>
+              <p className="col-sm-4 count fs-sm-5 fs-6 fw-bold text-white mb-0 ms-md-0 ms-3">
+                2
+              </p>
+              <h6 className="col-sm-8 mt-1 mb-0">Checkout</h6>
+            </div>
             <div className="bar"></div>
             <div className="d-md-flex">
-          <p className="col-sm-4 count fs-sm-5 fs-6 fw-bold text-white mb-0 ms-md-0 ms-3">3</p>
-          <h6 className="col-sm-8 mt-1 mb-0">
-               Payment
-            </h6>
-          </div>
+              <p className="col-sm-4 count fs-sm-5 fs-6 fw-bold text-white mb-0 ms-md-0 ms-3">
+                3
+              </p>
+              <h6 className="col-sm-8 mt-1 mb-0">Payment</h6>
+            </div>
             <div className="bar"></div>
             <div className="d-md-flex">
-          <p className="col-sm-4 count fs-sm-5 fs-6 fw-bold text-white mb-0 ms-md-0 ms-3">4</p>
-          <h6 className="col-sm-8 mt-1 mb-0">
-               Confirm
-            </h6>
-          </div>
+              <p className="col-sm-4 count fs-sm-5 fs-6 fw-bold text-white mb-0 ms-md-0 ms-3">
+                4
+              </p>
+              <h6 className="col-sm-8 mt-1 mb-0">Confirm</h6>
+            </div>
           </div>
         </div>
       </div>
@@ -46,12 +49,16 @@ const AddToCart = () => {
           <div className="col-lg-8">
             <div className="cart-head row pb-3 me-0">
               <h6 className="fw-bold fs-6 col-md-5">PRODUCT</h6>
-              <h6 className="fw-bold fs-6 col-md-3 text-center d-md-block d-none">QUANTITY</h6>
-              <h6 className="fw-bold fs-6 col-md-3 text-center d-md-block d-none">TOTAL</h6>
+              <h6 className="fw-bold fs-6 col-md-3 text-center d-md-block d-none">
+                QUANTITY
+              </h6>
+              <h6 className="fw-bold fs-6 col-md-3 text-center d-md-block d-none">
+                TOTAL
+              </h6>
               <div className="col-md-1"></div>
             </div>
-            <Cart/>
-            <Cart/>
+            <Cart />
+            <Cart />
             <div className="mt-5">
               <FilledButton title="Continue Shopping" link="/products" />
             </div>

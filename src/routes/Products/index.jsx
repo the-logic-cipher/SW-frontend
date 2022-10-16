@@ -1,14 +1,14 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./Product.scss";
 import { Link } from "react-router-dom";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import data from "../../components/Card/data";
 import Card from "../../components/Card";
-import Box from '@mui/material/Box';
-import Slider from '@mui/material/Slider';
+import Box from "@mui/material/Box";
+import Slider from "@mui/material/Slider";
+import Meta from "../../components/layout/Meta";
 
 const Products = () => {
-
   const valuetext = (value) => {
     return `${value}°C`;
   };
@@ -21,6 +21,8 @@ const Products = () => {
 
   return (
     <div>
+      <Meta title="Products" />
+
       <div className="container-fluid p-head py-5 my-5 text-center">
         <div className="container p-head-1">
           <h2 className="mb-3">Products</h2>
@@ -35,9 +37,9 @@ const Products = () => {
           </p>
         </div>
       </div>
-      <div className="container">
+      <div className="mx-sm-5 mx-4 px-xl-5 px-lg-3 px-md-2 px-sm-0">
         <div className="row">
-          <div className="col-md-9">
+          <div className="col-lg-9 col-xxl-9">
             <div className="d-flex justify-content-between">
               <div>Showing 10 of 5 results</div>
 
@@ -61,7 +63,7 @@ const Products = () => {
             </div>
           </div>
 
-          <div className="col-md-3 filter-bar px-5">
+          <div className="col-lg-3 col-xxl-3 filter-bar px-4">
             <div className="mt-5 pt-4">
               <h5 className="mb-4">Search</h5>
               <input type="text" placeholder="   Search" />
@@ -77,13 +79,13 @@ const Products = () => {
             <div className="my-5">
               <h5 className="mb-3">Filter</h5>
               <Box sx={{ width: 230 }}>
-              <Slider
-        getAriaLabel={() => 'Temperature range'}
-        value={value}
-        onChange={handleChange}
-        valueLabelDisplay="auto"
-        getAriaValueText={valuetext}
-      />
+                <Slider
+                  getAriaLabel={() => "Temperature range"}
+                  value={value}
+                  onChange={handleChange}
+                  valueLabelDisplay="auto"
+                  getAriaValueText={valuetext}
+                />
               </Box>
             </div>
           </div>

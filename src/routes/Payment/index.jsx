@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import DoneIcon from "@mui/icons-material/Done";
 import FilledButton from "../../components/Buttons/FilledButton";
+import Meta from "../../components/layout/Meta";
 
 const Payment = () => {
-
   const initialValues = {
     paymentMethod: "",
     addressMethod: "",
@@ -78,6 +78,8 @@ const Payment = () => {
 
   return (
     <div>
+      <Meta title="Payment" />
+
       <div className="p-head py-5">
         <div className="container text-center">
           <div className=" d-flex justify-content-center">
@@ -91,7 +93,7 @@ const Payment = () => {
             </h6>
             <div className="bar"></div>
             <h6>
-            <Link to="/checkout" className="mb-0 text-black fw-bold">
+              <Link to="/checkout" className="mb-0 text-black fw-bold">
                 <span className="counts fs-5 fw-bold text-white">
                   <DoneIcon sx={{ marginTop: -0.5 }} />
                 </span>{" "}
@@ -100,12 +102,13 @@ const Payment = () => {
             </h6>
             <div className="bar"></div>
             <h6 className="mb-0">
-              <span className="count fs-5 fw-bold text-white pb-1">3</span> Payment{" "}
+              <span className="count fs-5 fw-bold text-white pb-1">3</span>{" "}
+              Payment{" "}
             </h6>
             <div className="bar"></div>
             <h6 className="mb-0">
-              <span className="count fs-5 fw-bold text-white pb-1">4</span> Confirm
-              Order
+              <span className="count fs-5 fw-bold text-white pb-1">4</span>{" "}
+              Confirm Order
             </h6>
           </div>
         </div>
@@ -257,8 +260,17 @@ const Payment = () => {
                 <p className="text-danger">{formErrors.paymentMethod}</p>
                 <div className="d-lg-flex justify-content-end d-none mb-3">
                   {formValue.paymentMethod === "cardPayment" ? (
-                    <button className="fs-4 fs-lg-5 border-0 text-white mt-3 me-2" style={{paddingRight:22,paddingLeft:22, paddingTop:12, paddingBottom:12, backgroundColor:'#243c68'}}>
-                    Confirm Order
+                    <button
+                      className="fs-4 fs-lg-5 border-0 text-white mt-3 me-2"
+                      style={{
+                        paddingRight: 22,
+                        paddingLeft: 22,
+                        paddingTop: 12,
+                        paddingBottom: 12,
+                        backgroundColor: "#243c68",
+                      }}
+                    >
+                      Confirm Order
                     </button>
                   ) : (
                     <FilledButton title="Confirm Order" link="/confirm" />
@@ -289,14 +301,23 @@ const Payment = () => {
             </div>
           </div>
           <div className="d-flex justify-content-sm-end justify-content-center d-lg-none d-block mt-5">
-                  {formValue.paymentMethod === "cardPayment" ? (
-                    <button className="fs-4 fs-lg-5 border-0 text-white mt-3 mb-2 me-2" style={{paddingRight:22,paddingLeft:22, paddingTop:12, paddingBottom:12, backgroundColor:'#243c68'}}>
-                    Confirm Order
-                    </button>
-                  ) : (
-                    <FilledButton title="Confirm Order" link="/confirm" />
-                  )}
-                </div>
+            {formValue.paymentMethod === "cardPayment" ? (
+              <button
+                className="fs-4 fs-lg-5 border-0 text-white mt-3 mb-2 me-2"
+                style={{
+                  paddingRight: 22,
+                  paddingLeft: 22,
+                  paddingTop: 12,
+                  paddingBottom: 12,
+                  backgroundColor: "#243c68",
+                }}
+              >
+                Confirm Order
+              </button>
+            ) : (
+              <FilledButton title="Confirm Order" link="/confirm" />
+            )}
+          </div>
         </div>
       </div>
     </div>

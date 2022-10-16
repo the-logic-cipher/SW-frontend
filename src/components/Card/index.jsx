@@ -1,10 +1,11 @@
 import React from "react";
+import Rating from "@mui/material/Rating";
+import Stack from "@mui/material/Stack";
 import "./card.scss";
 import {
   MdOutlineShoppingCart,
   MdFavoriteBorder,
   MdOutlineArrowForward,
-  MdOutlineStar,
 } from "react-icons/md";
 
 const Card = (props) => {
@@ -14,20 +15,16 @@ const Card = (props) => {
         <div className="cards-img">
           <img className="img-fluid" src={props.img} alt="" />
           <div className="icons">
-          <MdOutlineShoppingCart className="card-icons" />
-          <MdFavoriteBorder className="card-icons center-icon" />
-          <MdOutlineArrowForward className="card-icons" />
-        </div>
+            <MdOutlineShoppingCart className="card-icons" />
+            <MdFavoriteBorder className="card-icons center-icon" />
+            <MdOutlineArrowForward className="card-icons" />
+          </div>
         </div>
         <h5 className="fs-4 pt-3">{props.title}</h5>
         <h6 className="fs-5 text-black-50">Rs. {props.price}</h6>
-        <div className="rating d-flex">
-          <MdOutlineStar className="star" />
-          <MdOutlineStar className="star" />
-          <MdOutlineStar className="star" />
-          <MdOutlineStar className="star" />
-          <MdOutlineStar className="star" />
-        </div>
+        <Stack spacing={1}>
+        <Rating name="size-small" defaultValue={2} size="small" />
+        </Stack>
       </div>
     </div>
   );

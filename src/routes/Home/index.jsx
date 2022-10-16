@@ -9,12 +9,16 @@ import {
   MdOutlineContactMail,
 } from "react-icons/md";
 import FilledButton from "../../components/Buttons/FilledButton";
-import OutlinedButton from "../../components/Buttons/OutlinedButton";
 import YouMayLike from "../../components/YouMayLike";
+import Meta from "../../components/layout/Meta";
 
 const Home = () => {
   return (
     <div>
+      {/* --------------- Title -------------- */}
+
+      <Meta title="Shashkay Washkay" />
+
       {/* --------------- Slider -------------- */}
 
       <Slider />

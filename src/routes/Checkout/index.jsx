@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import DoneIcon from "@mui/icons-material/Done";
 import { Link } from "react-router-dom";
 import FilledButton from "../../components/Buttons/FilledButton";
+import Meta from "../../components/layout/Meta";
 
 const Checkout = () => {
-
   const initialValues = {
     firstName: "",
     lastName: "",
@@ -20,7 +20,6 @@ const Checkout = () => {
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
 
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValue({
@@ -33,7 +32,6 @@ const Checkout = () => {
     e.preventDefault();
     setFormErrors(validate(formValue));
     setIsSubmit(true);
-
   };
 
   useEffect(() => {
@@ -45,7 +43,9 @@ const Checkout = () => {
 
   const validate = (values) => {
     const errors = {};
-    const emailRegex = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+    const emailRegex = new RegExp(
+      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    );
     const regex = new RegExp(/^[0-9\b]+$/);
 
     if (!values.firstName) {
@@ -65,11 +65,9 @@ const Checkout = () => {
     }
     if (!values.phone) {
       errors.phone = "Enter Your phone Number!";
-    } 
-    else if (!regex.test(values.phone)) {
+    } else if (!regex.test(values.phone)) {
       errors.phone = "You Can Enter Only Number!";
-    } 
-    else if (values.phone.length != 11) {
+    } else if (values.phone.length != 11) {
       errors.phone = "Enter a valid Phone Number!";
     }
     if (!values.email) {
@@ -82,6 +80,8 @@ const Checkout = () => {
 
   return (
     <div>
+      <Meta title="Checkout" />
+
       <div className="p-head py-5">
         <div className="container text-center">
           <div className=" d-flex justify-content-center">
@@ -95,16 +95,18 @@ const Checkout = () => {
             </h6>
             <div className="bar"></div>
             <h6 className="mb-0">
-              <span className="count fs-5 fw-bold text-white pb-1">2</span> Checkout
+              <span className="count fs-5 fw-bold text-white pb-1">2</span>{" "}
+              Checkout
             </h6>
             <div className="bar"></div>
             <h6 className="mb-0">
-              <span className="count fs-5 fw-bold text-white pb-1">3</span> Payment{" "}
+              <span className="count fs-5 fw-bold text-white pb-1">3</span>{" "}
+              Payment{" "}
             </h6>
             <div className="bar"></div>
             <h6 className="mb-0">
-              <span className="count fs-5 fw-bold text-white pb-1">4</span> Confirm
-              Order
+              <span className="count fs-5 fw-bold text-white pb-1">4</span>{" "}
+              Confirm Order
             </h6>
           </div>
         </div>
@@ -216,7 +218,9 @@ const Checkout = () => {
             </div>
 
             <div className="col-lg-4">
-              <h6 className="fw-bold fs-6 ms-lg-5 ms-0 mt-5 mt-lg-0">PAYMENT</h6>
+              <h6 className="fw-bold fs-6 ms-lg-5 ms-0 mt-5 mt-lg-0">
+                PAYMENT
+              </h6>
               <div className="cart py-5 px-4 ms-lg-5 ms-0 mt-4">
                 <h6 className="fw-bold fs-6 mb-5">CART TOTAL</h6>
                 <div className="d-flex justify-content-between">
@@ -236,11 +240,11 @@ const Checkout = () => {
               </div>
             </div>
             <div className="d-flex justify-content-end mt-5 d-block d-lg-none">
-                  {/* <button className="border-0 bg-black text-white px-4 py-2 mt-3">
+              {/* <button className="border-0 bg-black text-white px-4 py-2 mt-3">
                     CONTINUE PAYMENT
                   </button> */}
-                  <FilledButton title="Continue Payment" link="/payment" />
-                </div>
+              <FilledButton title="Continue Payment" link="/payment" />
+            </div>
           </div>
         </div>
       </div>
